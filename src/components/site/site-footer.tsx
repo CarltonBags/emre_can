@@ -35,6 +35,15 @@ export function SiteFooter() {
                 {item.label}
               </Link>
             ))}
+            {site.legalNav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           <div className="flex flex-col gap-2">

@@ -20,4 +20,18 @@ export const site = {
     { href: "/archiv", label: "Archiv" },
     { href: "/ueber", label: "Über den Blog" },
   ],
+  /** Steht nur im Fuß, nicht in der Hauptnavigation. */
+  legalNav: [{ href: "/impressum", label: "Impressum" }],
+  /** Anbieterkennzeichnung nach § 5 DDG. */
+  imprint: {
+    name: "Kevin Keibel",
+    street: "Plauener Straße 28",
+    city: "44139 Dortmund",
+    country: "Deutschland",
+    /**
+     * Pflichtangabe: Ein Impressum braucht eine elektronische Kontaktmöglichkeit.
+     * Hier die tatsächliche Adresse eintragen, bevor die Seite online geht.
+     */
+    email: "",
+  },
 } as const;
