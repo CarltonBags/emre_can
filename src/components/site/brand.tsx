@@ -1,11 +1,12 @@
 import Link from "next/link";
 
+import { StadiumMark } from "@/components/site/stadium-mark";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /**
- * Platzhalter fürs Branding. Das gestrichelte Feld links ist der Slot
- * fürs spätere Logo, rechts steht der Arbeitstitel.
+ * Logo plus Schriftzug. Der Name ist noch ein Arbeitstitel und steckt
+ * in `site.workingTitle`.
  */
 export function Brand({
   className,
@@ -22,15 +23,10 @@ export function Brand({
       className={cn("group flex items-center gap-3", className)}
       aria-label={`${site.workingTitle} – Startseite`}
     >
-      <span
-        className={cn(
-          "grid shrink-0 place-items-center border-2 border-dashed border-bvb/60 font-display font-bold text-bvb/70 transition-colors group-hover:border-bvb group-hover:text-bvb",
-          large ? "size-16 text-2xl" : "size-10 text-base",
-        )}
-        aria-hidden
-      >
-        {site.logoMark}
-      </span>
+      <StadiumMark
+        className={cn("shrink-0", large ? "size-16" : "size-10")}
+        title="Sitzplan von oben, ein Platz auf der Seitentribüne ist schwarz"
+      />
       <span className="flex flex-col leading-none">
         <span
           className={cn(
@@ -38,7 +34,7 @@ export function Brand({
             large ? "text-[11px]" : "text-[9px]",
           )}
         >
-          Logo folgt
+          Name folgt
         </span>
         <span
           className={cn(

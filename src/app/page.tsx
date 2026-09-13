@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 import { ArticleCard, ArticleRow, FeatureCard } from "@/components/site/article-card";
 import { ChevronBand, CollarNotch, WeaveBackdrop } from "@/components/site/jersey";
+import { StadiumMark } from "@/components/site/stadium-mark";
 import { Button } from "@/components/ui/button";
 import { articles } from "@/content/articles";
 import { site } from "@/lib/site";
@@ -28,17 +29,15 @@ export default function Home() {
             {site.eyebrow}
           </p>
 
-          {/* Branding-Platzhalter: hier kommt später das Logo hin. */}
+          {/* Logo plus Arbeitstitel. Der Name steht noch aus. */}
           <div className="mt-6 flex flex-wrap items-center gap-5">
-            <div
-              aria-hidden
-              className="grid size-24 shrink-0 place-items-center border-[3px] border-dashed border-bvb-ink/40 font-display text-3xl font-bold text-bvb-ink/40 sm:size-28"
-            >
-              {site.logoMark}
-            </div>
+            <StadiumMark
+              className="size-24 shrink-0 sm:size-28"
+              title="Sitzplan von oben, ein Platz auf der Seitentribüne ist schwarz"
+            />
             <div>
               <p className="font-mono text-[10px] tracking-[0.3em] uppercase opacity-60">
-                Logo- und Namensfläche – noch frei
+                Name folgt
               </p>
               <h1 className="font-display text-5xl leading-[0.9] font-extrabold tracking-tight uppercase sm:text-7xl">
                 {site.workingTitle}

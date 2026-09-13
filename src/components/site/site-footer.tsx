@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { ChevronBand } from "@/components/site/jersey";
+import { StadiumMark } from "@/components/site/stadium-mark";
 import { site } from "@/lib/site";
 
 export function SiteFooter() {
@@ -11,15 +12,10 @@ export function SiteFooter() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[2fr_1fr_1fr]">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <span
-                aria-hidden
-                className="grid size-11 shrink-0 place-items-center border-2 border-dashed border-bvb/50 font-display font-bold text-bvb/60"
-              >
-                {site.logoMark}
-              </span>
+              <StadiumMark className="size-11 shrink-0" />
               <div className="leading-tight">
                 <p className="font-mono text-[9px] tracking-[0.25em] text-muted-foreground uppercase">
-                  Platz für das Logo
+                  Name folgt
                 </p>
                 <p className="font-display text-xl font-extrabold tracking-tight uppercase">
                   {site.workingTitle}

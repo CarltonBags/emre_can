@@ -28,7 +28,7 @@ Der Blog hat noch keinen Namen. Alle Platzhalter stecken in **`src/lib/site.ts`*
 
 ```ts
 workingTitle  // Arbeitstitel im Kopf, Fuß und Titel-Tag
-logoMark      // Kürzel im gestrichelten Logofeld
+// Das Logo selbst liegt in src/components/site/stadium-mark.tsx
 eyebrow       // Zeile über dem Namen
 claim         // Zweizeiler im Fuß
 ```

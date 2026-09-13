@@ -13,8 +13,6 @@ export const site = {
   claim: "Schwarzgelb, aus dem Bauch heraus. Seit 2023.",
   description:
     "Geschichten über Borussia Dortmund. Erinnerungen, Spielerporträts und Saisonnotizen von 2023 bis heute.",
-  /** Platzhalter-Kürzel im Logofeld. */
-  logoMark: "??",
   author: {
     name: "Der Autor",
     bio: "Jahrgang 1986, aufgewachsen in Dortmund, seit 1994 im Stadion. Schreibt hier über einen Verein, bei dem er nie die Wahl hatte.",
