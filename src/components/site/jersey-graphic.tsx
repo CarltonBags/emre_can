@@ -3,23 +3,29 @@ import { cn } from "@/lib/utils";
 /**
  * Die schwarze Grafik des Heimtrikots 1993/94.
  *
- * Kein gleichmäßiges Streifenmuster: Die Striche liegen lückenlos
- * nebeneinander, alle gleich stark, aber jeder unterschiedlich lang und an
- * einer anderen Stelle angesetzt. Dadurch franst die Fläche an beiden Kanten
- * aus, statt als sauberer Balken zu enden.
+ * Striche von oben rechts nach unten links, lückenlos nebeneinander, alle
+ * gleich stark – nur die Länge und der Ansatzpunkt wechseln.
  *
- * Gebaut wird senkrecht, gedreht wird um 45 Grad, sodass die Striche von
- * oben rechts nach unten links laufen.
+ * Wichtig für die Optik: Die Striche laufen oben rechts aus dem Bild heraus,
+ * enden aber alle vor der linken und der unteren Kante. Würden sie dort
+ * abgeschnitten, entstünde genau die gerade Linie, die das Quadrat sichtbar
+ * macht, in dem die Grafik steckt. Deshalb wird für jede Bahn ausgerechnet,
+ * wo die gedrehte Zeichenfläche endet, und davor mit zufälligem Abstand
+ * Schluss gemacht.
  *
  * Die Werte kommen aus einem Generator mit festem Startwert, damit Server und
  * Client dasselbe Bild rendern und es sich zwischen zwei Builds nicht ändert.
  */
 
 const VIEW = 200;
-/** Überstand, damit nach der Drehung keine leeren Ecken entstehen. */
-const BLEED = 150;
 /** Strichstärke. Die Bahnen stoßen ohne Zwischenraum aneinander. */
-const STROKE = 3;
+const STROKE = 2;
+/** Mindestabstand zur unteren und linken Kante. */
+const MARGIN = 7;
+
+const CENTER = VIEW / 2;
+/** Halbe Diagonale: So weit reicht die um 45 Grad gedrehte Fläche. */
+const REACH = (VIEW * Math.SQRT2) / 2;
 
 function seeded(seed: number) {
   let state = seed >>> 0;
@@ -29,19 +35,39 @@ function seeded(seed: number) {
   };
 }
 
+/**
+ * Untere Grenze der gedrehten Zeichenfläche an der Stelle x. Das Bild ist im
+ * Baukoordinatensystem eine auf die Spitze gestellte Raute; dies ist ihre
+ * untere Kante, also im fertigen Bild der linke und der untere Rand.
+ */
+function floorAt(x: number) {
+  return CENTER + REACH - Math.abs(x - CENTER);
+}
+
+/** Obere Grenze. Dort darf überstehen – das ist die Ecke oben rechts. */
+function ceilingAt(x: number) {
+  return CENTER - REACH + Math.abs(x - CENTER);
+}
+
 function buildBars() {
   const random = seeded(19_9394);
   const bars: { x: number; y: number; h: number }[] = [];
-  const from = -BLEED;
-  const to = VIEW + BLEED;
-  const span = to - from;
 
-  for (let x = from; x < to; x += STROKE) {
-    // Weite Spanne, damit genug Enden im sichtbaren Bereich liegen –
-    // sonst laufen alle Striche durch und die Fläche wirkt wieder massiv.
-    const length = span * (0.12 + random() * 0.58);
-    const start = from + random() * (span - length);
-    bars.push({ x, y: start, h: length });
+  for (let x = CENTER - REACH; x < CENTER + REACH; x += STROKE) {
+    // Die schmalere der beiden Kanten des Strichs zählt, sonst ragt die
+    // hintere Ecke doch über die Grenze.
+    const limit = Math.min(floorAt(x), floorAt(x + STROKE)) - MARGIN;
+    const top = Math.max(ceilingAt(x), ceilingAt(x + STROKE));
+    const window = limit - top;
+    if (window < 6) continue;
+
+    // Ohne die Streuung lägen alle Enden auf der Rautenkante – dann wäre die
+    // gerade Linie wieder da, nur ein Stück weiter innen.
+    const end = limit - random() * window * 0.6;
+    const length = VIEW * (0.3 + random() * 0.95);
+    const start = end - length;
+
+    bars.push({ x, y: start, h: end - start });
   }
 
   return bars;
@@ -54,11 +80,12 @@ export function JerseyGraphic({ className }: { className?: string }) {
     <svg
       aria-hidden
       viewBox={`0 0 ${VIEW} ${VIEW}`}
-      preserveAspectRatio="xMidYMid slice"
+      // Nicht zuschneiden: Beim Zuschneiden würden die Striche an der Kante
+      // gekappt und das Quadrat wäre wieder zu sehen.
+      preserveAspectRatio="xMidYMid meet"
       className={cn("pointer-events-none", className)}
     >
-      {/* Positive Drehung: die Striche laufen von oben rechts nach unten links. */}
-      <g fill="currentColor" transform={`rotate(45 ${VIEW / 2} ${VIEW / 2})`}>
+      <g fill="currentColor" transform={`rotate(45 ${CENTER} ${CENTER})`}>
         {BARS.map((bar, index) => (
           <rect key={index} x={bar.x} y={bar.y} width={STROKE} height={bar.h} />
         ))}

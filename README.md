@@ -25,6 +25,13 @@ Zwei Motive, bewusst getrennt:
   unterschiedlich lang und versetzt angesetzt. Erzeugt aus einem Generator mit
   festem Startwert, damit Server und Client dasselbe Bild rendern. Ein
   `repeating-linear-gradient` scheidet aus – der kann nur gleich lange Striche.
+
+  Die Striche laufen oben rechts aus dem Bild, enden aber mit Abstand vor der
+  linken und unteren Kante. Sonst schneidet der Rand sie ab und das Quadrat,
+  in dem die Grafik sitzt, wird als gerade Linie sichtbar. `floorAt()` rechnet
+  dafür aus, wo die gedrehte Fläche endet. Aus demselben Grund steht
+  `preserveAspectRatio` auf `meet` und alle Einsatzorte sind quadratisch –
+  bei `slice` würde wieder gekappt.
 - **Schmale Bänder** zwischen den Sektionen bleiben beim gleichmäßigen
   Zickzack (`.jersey-chevron` in `globals.css`, `ChevronBand`). Auf zehn Pixeln
   Höhe wirkt die zerrissene Variante nur unruhig.
