@@ -39,8 +39,10 @@ export default function AboutPage() {
         </p>
         <p className="my-5">
           Das Logo oben links ist genau das. Der Sitzplan von oben, als
-          Pixelgrafik, 444 Kästchen, jedes ein Platz, alles verkauft. Nur einer
-          auf der Westtribüne, knapp unter der Mittellinie, hat eine andere
+          Pixelgrafik, 363 Kästchen, jedes ein Platz, alles verkauft. Wer genau
+          hinschaut, erkennt den Grundriss: vier freistehende Tribünen, offene
+          Ecken, und unten die Süd, breiter und tiefer als alles andere. Nur ein
+          Platz auf der Westtribüne, knapp unter der Mittellinie, hat eine andere
           Farbe. Der ist meiner.
         </p>
 

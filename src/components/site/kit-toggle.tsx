@@ -66,6 +66,9 @@ export function KitToggle({ className }: { className?: string }) {
               style={{ backgroundColor: option.swatch }}
             />
             {option.label}
+            <span className="font-mono text-[9px] tracking-normal opacity-60">
+              {option.year}
+            </span>
           </button>
         );
       })}

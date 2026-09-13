@@ -6,12 +6,14 @@ export const KITS = [
   {
     id: "heim",
     label: "Heim",
+    year: "93/94",
     description: "Heimtrikot 1993/94 – Gelb auf Schwarz",
     swatch: "#fde100",
   },
   {
     id: "auswaerts",
     label: "Auswärts",
+    year: "93/94",
     description: "Auswärtstrikot 1993/94 – Pink auf Schwarz",
     swatch: "#e8398b",
   },
