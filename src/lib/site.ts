@@ -28,10 +28,7 @@ export const site = {
     street: "Plauener Straße 28",
     city: "44139 Dortmund",
     country: "Deutschland",
-    /**
-     * Pflichtangabe: Ein Impressum braucht eine elektronische Kontaktmöglichkeit.
-     * Hier die tatsächliche Adresse eintragen, bevor die Seite online geht.
-     */
-    email: "",
+    /** Pflichtangabe: elektronische Kontaktmöglichkeit, unmittelbar erreichbar. */
+    email: "kevin.keibel.kk@gmail.com",
   },
 } as const;
