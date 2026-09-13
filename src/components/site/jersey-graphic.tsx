@@ -6,12 +6,13 @@ import { cn } from "@/lib/utils";
  * Striche von oben rechts nach unten links, lückenlos nebeneinander, alle
  * gleich stark – nur die Länge und der Ansatzpunkt wechseln.
  *
- * Wichtig für die Optik: Die Striche laufen oben rechts aus dem Bild heraus,
- * enden aber alle vor der linken und der unteren Kante. Würden sie dort
- * abgeschnitten, entstünde genau die gerade Linie, die das Quadrat sichtbar
- * macht, in dem die Grafik steckt. Deshalb wird für jede Bahn ausgerechnet,
- * wo die gedrehte Zeichenfläche endet, und davor mit zufälligem Abstand
- * Schluss gemacht.
+ * Wichtig für die Optik: Jeder Strich läuft oben bzw. rechts aus dem Bild
+ * heraus – dort darf angeschnitten werden, das ist die Kante, an der die
+ * Grafik hängt. Vor der linken und der unteren Kante hört dagegen jeder
+ * Strich auf. Würde dort geschnitten, entstünde genau die gerade Linie, die
+ * das Quadrat sichtbar macht, in dem die Grafik steckt. Deshalb wird für jede
+ * Bahn ausgerechnet, wo die gedrehte Zeichenfläche endet, und davor mit
+ * zufälligem Abstand Schluss gemacht. Die Länge ergibt sich daraus von selbst.
  *
  * Die Werte kommen aus einem Generator mit festem Startwert, damit Server und
  * Client dasselbe Bild rendern und es sich zwischen zwei Builds nicht ändert.
@@ -22,6 +23,8 @@ const VIEW = 200;
 const STROKE = 2;
 /** Mindestabstand zur unteren und linken Kante. */
 const MARGIN = 7;
+/** So weit ragt jeder Strich über die obere Kante hinaus. */
+const OVERSHOOT = 6;
 
 const CENTER = VIEW / 2;
 /** Halbe Diagonale: So weit reicht die um 45 Grad gedrehte Fläche. */
@@ -61,11 +64,14 @@ function buildBars() {
     const window = limit - top;
     if (window < 6) continue;
 
-    // Ohne die Streuung lägen alle Enden auf der Rautenkante – dann wäre die
-    // gerade Linie wieder da, nur ein Stück weiter innen.
+    // Jeder Strich beginnt jenseits der oberen Kante, läuft also oben bzw.
+    // rechts aus dem Bild heraus. Angeschnitten wird nur dort.
+    const start = Math.min(ceilingAt(x), ceilingAt(x + STROKE)) - OVERSHOOT;
+
+    // Die Länge entsteht allein daraus, wo der Strich unten links aufhört.
+    // Ohne diese Streuung lägen alle Enden auf der Rautenkante – dann wäre
+    // die gerade Linie wieder da, nur ein Stück weiter innen.
     const end = limit - random() * window * 0.6;
-    const length = VIEW * (0.3 + random() * 0.95);
-    const start = end - length;
 
     bars.push({ x, y: start, h: end - start });
   }
