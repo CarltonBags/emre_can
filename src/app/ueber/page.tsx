@@ -39,11 +39,11 @@ export default function AboutPage() {
         </p>
         <p className="my-5">
           Das Logo oben links ist genau das. Der Sitzplan von oben, als
-          Pixelgrafik, 363 Kästchen, jedes ein Platz, alles verkauft. Wer genau
-          hinschaut, erkennt den Grundriss: vier freistehende Tribünen, offene
-          Ecken, und unten die Süd, breiter und tiefer als alles andere. Nur ein
-          Platz auf der Westtribüne, knapp unter der Mittellinie, hat eine andere
-          Farbe. Der ist meiner.
+          Pixelgrafik, 338 Kästchen, jedes ein Platz, alles verkauft. Wer genau
+          hinschaut, erkennt den Grundriss: vier freistehende Tribünen, keine
+          durchgehende Schüssel, dazu die offenen Ecken. Nur ein Platz auf der
+          Westtribüne, knapp unter der Mittellinie, hat eine andere Farbe. Der
+          ist meiner.
         </p>
 
         <h2 className="mt-12 mb-4 font-display text-2xl font-extrabold tracking-wide uppercase sm:text-3xl">

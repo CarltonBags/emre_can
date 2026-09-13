@@ -280,7 +280,6 @@
     <rect x="92.5" y="88.5" width="3" height="3" fill="#fde100"/>
     <rect x="96.5" y="88.5" width="3" height="3" fill="#fde100"/>
     <rect x="100.5" y="88.5" width="3" height="3" fill="#fde100"/>
-    <rect x="24.5" y="92.5" width="3" height="3" fill="#fde100"/>
     <rect x="28.5" y="92.5" width="3" height="3" fill="#fde100"/>
     <rect x="32.5" y="92.5" width="3" height="3" fill="#fde100"/>
     <rect x="36.5" y="92.5" width="3" height="3" fill="#fde100"/>
@@ -296,8 +295,6 @@
     <rect x="76.5" y="92.5" width="3" height="3" fill="#fde100"/>
     <rect x="80.5" y="92.5" width="3" height="3" fill="#fde100"/>
     <rect x="84.5" y="92.5" width="3" height="3" fill="#fde100"/>
-    <rect x="88.5" y="92.5" width="3" height="3" fill="#fde100"/>
-    <rect x="24.5" y="96.5" width="3" height="3" fill="#fde100"/>
     <rect x="28.5" y="96.5" width="3" height="3" fill="#fde100"/>
     <rect x="32.5" y="96.5" width="3" height="3" fill="#fde100"/>
     <rect x="36.5" y="96.5" width="3" height="3" fill="#fde100"/>
@@ -313,8 +310,6 @@
     <rect x="76.5" y="96.5" width="3" height="3" fill="#fde100"/>
     <rect x="80.5" y="96.5" width="3" height="3" fill="#fde100"/>
     <rect x="84.5" y="96.5" width="3" height="3" fill="#fde100"/>
-    <rect x="88.5" y="96.5" width="3" height="3" fill="#fde100"/>
-    <rect x="24.5" y="100.5" width="3" height="3" fill="#fde100"/>
     <rect x="28.5" y="100.5" width="3" height="3" fill="#fde100"/>
     <rect x="32.5" y="100.5" width="3" height="3" fill="#fde100"/>
     <rect x="36.5" y="100.5" width="3" height="3" fill="#fde100"/>
@@ -330,8 +325,6 @@
     <rect x="76.5" y="100.5" width="3" height="3" fill="#fde100"/>
     <rect x="80.5" y="100.5" width="3" height="3" fill="#fde100"/>
     <rect x="84.5" y="100.5" width="3" height="3" fill="#fde100"/>
-    <rect x="88.5" y="100.5" width="3" height="3" fill="#fde100"/>
-    <rect x="24.5" y="104.5" width="3" height="3" fill="#fde100"/>
     <rect x="28.5" y="104.5" width="3" height="3" fill="#fde100"/>
     <rect x="32.5" y="104.5" width="3" height="3" fill="#fde100"/>
     <rect x="36.5" y="104.5" width="3" height="3" fill="#fde100"/>
@@ -347,23 +340,5 @@
     <rect x="76.5" y="104.5" width="3" height="3" fill="#fde100"/>
     <rect x="80.5" y="104.5" width="3" height="3" fill="#fde100"/>
     <rect x="84.5" y="104.5" width="3" height="3" fill="#fde100"/>
-    <rect x="88.5" y="104.5" width="3" height="3" fill="#fde100"/>
-    <rect x="24.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="28.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="32.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="36.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="40.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="44.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="48.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="52.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="56.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="60.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="64.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="68.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="72.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="76.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="80.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="84.5" y="108.5" width="3" height="3" fill="#fde100"/>
-    <rect x="88.5" y="108.5" width="3" height="3" fill="#fde100"/>
   </g>
 </svg>

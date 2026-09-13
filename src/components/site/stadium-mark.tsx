@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
  * Das Logo: der Sitzplan von oben, als Pixelgrafik.
  *
  * Die Form folgt dem Signal Iduna Park: vier freistehende Tribünen statt
- * einer durchgehenden Schüssel, offene Ecken mit den später eingesetzten
- * Eckblöcken – und eine Südtribüne, die breiter und tiefer ist als alles
- * andere, weil sie das nun mal ist.
+ * einer durchgehenden Schüssel, dazwischen die offenen Ecken mit den später
+ * eingesetzten Eckblöcken. Die Blöcke liegen spiegelsymmetrisch zur Mitte,
+ * oben wie unten gleich viele Reihen.
  *
  * Jede Zelle ist ein Platz, alle sind verkauft, deshalb durchgehend in der
  * Trikotfarbe. Genau einer auf der Westtribüne, knapp unter der Mittellinie,
@@ -25,7 +25,7 @@ const PITCH: Block = { x0: 8, x1: 20, y0: 10, y1: 18 };
 
 const STANDS: Block[] = [
   { x0: 7, x1: 21, y0: 2, y1: 7 }, // Nord
-  { x0: 6, x1: 22, y0: 21, y1: 27 }, // Süd – breiter und tiefer als der Rest
+  { x0: 7, x1: 21, y0: 21, y1: 26 }, // Süd – Spiegelbild der Nord
   { x0: 1, x1: 5, y0: 9, y1: 19 }, // West
   { x0: 23, x1: 27, y0: 9, y1: 19 }, // Ost
   { x0: 3, x1: 6, y0: 6, y1: 8 }, // Ecke Nordwest

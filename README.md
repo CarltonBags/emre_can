@@ -34,10 +34,10 @@ ersten Paint, sonst blitzt kurz das Heimtrikot auf.
 ### Logo
 
 `components/site/stadium-mark.tsx` zeichnet den Sitzplan von oben: 29x29-Raster,
-363 Plätze. Die Form folgt dem Signal Iduna Park – vier freistehende Tribünen
-statt einer Schüssel, offene Ecken mit den nachträglich eingesetzten Eckblöcken,
-und eine Südtribüne, die breiter und tiefer ist als alles andere. Die Blöcke
-stehen als Rechtecke in `STANDS`. Alle Plätze tragen `--bvb`,
+338 Plätze. Die Form folgt dem Signal Iduna Park – vier freistehende Tribünen
+statt einer Schüssel, dazu die offenen Ecken mit den nachträglich eingesetzten
+Eckblöcken. Die Blöcke stehen als Rechtecke in `STANDS` und liegen spiegel-
+symmetrisch zur Mitte. Alle Plätze tragen `--bvb`,
 einer auf der Westtribüne `--seat-mine` – und das ist bewusst die Farbe des
 jeweils anderen Trikots. `src/app/icon.svg` hat dieselbe Geometrie mit festen
 Farben, weil ein Favicon keine CSS-Variablen lesen kann.
