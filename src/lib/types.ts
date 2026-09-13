@@ -25,4 +25,9 @@ export type Article = {
   body: string;
   /** Wird auf der Startseite groß ausgespielt */
   featured?: boolean;
+  /**
+   * Steht unabhängig vom Datum als Aufmacher oben auf der Startseite.
+   * Genau ein Artikel sollte das gesetzt haben.
+   */
+  pinned?: boolean;
 };

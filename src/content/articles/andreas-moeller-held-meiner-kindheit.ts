@@ -8,6 +8,8 @@ const article: Article = {
   date: "2025-09-02",
   category: "Legenden",
   tags: ["Andreas Möller", "1995", "1996", "1997", "Nostalgie"],
+  featured: true,
+  pinned: true,
   lede:
     "Weltmeister 1990, Europameister 1996, zweimal deutscher Meister, Champions-League-Sieger 1997. Und trotzdem taucht sein Name in keiner Top-5-Liste auf. Ein Geburtstagstext über die ungerechteste Fußnote des deutschen Fußballs.",
   body: `Heute wird Andreas Möller wieder ein Jahr älter, und wie jedes Jahr an diesem Datum fange ich dieselbe Diskussion an, die ich seit ungefähr 1996 führe. Meistens mit denselben Leuten. Meistens mit demselben Ergebnis.

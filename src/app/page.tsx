@@ -9,7 +9,8 @@ import { site } from "@/lib/site";
 
 export default function Home() {
   const featured = articles.filter((article) => article.featured);
-  const lead = featured[0] ?? articles[0];
+  // Ein angepinnter Artikel schlägt das Datum, sonst der neueste Aufmacher.
+  const lead = articles.find((article) => article.pinned) ?? featured[0] ?? articles[0];
   const rest = articles.filter((article) => article.slug !== lead.slug);
   const recent = rest.slice(0, 6);
   const archive = rest.slice(6, 14);
@@ -60,7 +61,7 @@ export default function Home() {
               size="lg"
               className="rounded-none bg-bvb-ink font-display tracking-widest text-bvb uppercase hover:bg-bvb-ink/85"
             >
-              <Link href={`/artikel/${lead.slug}`}>Neuester Text</Link>
+              <Link href={`/artikel/${lead.slug}`}>Zum Aufmacher</Link>
             </Button>
             <Button
               asChild
