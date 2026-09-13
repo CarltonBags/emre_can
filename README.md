@@ -17,10 +17,12 @@ Neongelbe Fläche, harte schwarze Zickzack-Grafik auf Schulter und Ärmel,
 V-Kragen. Das grelle Neongelb von damals ist bewusst durch das heutige
 Vereinsgelb `#FDE100` ersetzt.
 
-Die Trikot-Motive liegen als Utilities in `src/app/globals.css`
-(`.jersey-chevron`, `.jersey-chevron-light`, `.jersey-weave`) und als
-Komponenten in `src/components/site/jersey.tsx` (`ChevronBand`,
-`CollarNotch`, `WeaveBackdrop`).
+Die zerrissene Schultergrafik steckt in `components/site/jersey-graphic.tsx`:
+Balken mit wechselnder Länge und Stärke, erzeugt aus einem Generator mit festem
+Startwert, damit Server und Client dasselbe Bild rendern. Bewusst kein
+`repeating-linear-gradient` – das kann nur gleich lange Striche.
+Dazu `components/site/jersey.tsx` (`ChevronBand`, `CollarNotch`,
+`WeaveBackdrop`) und `.jersey-weave` in `globals.css`.
 
 ### Zwei Farbwelten
 

@@ -1,8 +1,10 @@
+import { JerseyGraphic } from "@/components/site/jersey-graphic";
 import { cn } from "@/lib/utils";
 
 /**
- * Die schwarze Zickzack-Grafik, die beim 93/94er Nike-Trikot über
- * Schulter und Ärmel lief. Hier als Band zwischen den Sektionen.
+ * Ein schmaler Ausschnitt der Trikotgrafik als Band zwischen den Sektionen.
+ * Weil die Balken unterschiedlich lang und stark sind, sieht jedes Band
+ * anders aus als ein sauber gezogener Streifen – so wie das Trikot eben auch.
  */
 export function ChevronBand({
   className,
@@ -17,12 +19,14 @@ export function ChevronBand({
     <div
       aria-hidden
       className={cn(
-        "w-full",
-        tone === "onYellow" ? "bg-bvb jersey-chevron" : "bg-bvb-ink jersey-chevron-light",
+        "relative w-full overflow-hidden",
+        tone === "onYellow" ? "bg-bvb text-bvb-ink" : "bg-bvb-ink text-bvb",
         className,
       )}
       style={{ height }}
-    />
+    >
+      <JerseyGraphic className="absolute inset-0 size-full" />
+    </div>
   );
 }
 

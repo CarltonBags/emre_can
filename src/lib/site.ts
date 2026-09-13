@@ -21,7 +21,10 @@ export const site = {
     { href: "/ueber", label: "Über den Blog" },
   ],
   /** Steht nur im Fuß, nicht in der Hauptnavigation. */
-  legalNav: [{ href: "/impressum", label: "Impressum" }],
+  legalNav: [
+    { href: "/impressum", label: "Impressum" },
+    { href: "/datenschutz", label: "Datenschutz" },
+  ],
   /** Anbieterkennzeichnung nach § 5 DDG. */
   imprint: {
     name: "Kevin Keibel",
@@ -30,5 +33,15 @@ export const site = {
     country: "Deutschland",
     /** Pflichtangabe: elektronische Kontaktmöglichkeit, unmittelbar erreichbar. */
     email: "kevin.keibel.kk@gmail.com",
+  },
+  privacy: {
+    /**
+     * Der Hoster verarbeitet die Zugriffsdaten und muss in der
+     * Datenschutzerklärung stehen. Sobald klar ist, wo die Seite läuft,
+     * hier den Namen eintragen – solange bleibt die Stelle als offen markiert.
+     */
+    hostingProvider: "",
+    /** Letzte inhaltliche Änderung der Datenschutzerklärung. */
+    updated: "2026-09-13",
   },
 } as const;

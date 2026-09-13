@@ -20,10 +20,7 @@ export function Brand({
       className={cn("group flex items-center gap-3", className)}
       aria-label={`${site.name} – Startseite`}
     >
-      <StadiumMark
-        className={cn("shrink-0", large ? "size-16" : "size-10")}
-        title="Sitzplan von oben, ein Platz auf der Seitentribüne ist schwarz"
-      />
+      <StadiumMark className={cn("shrink-0", large ? "size-16" : "size-10")} />
       <span
         className={cn(
           "font-display leading-none font-extrabold tracking-tight text-foreground uppercase",

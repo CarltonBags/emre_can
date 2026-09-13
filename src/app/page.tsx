@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 import { ArticleCard, ArticleRow, FeatureCard } from "@/components/site/article-card";
 import { ChevronBand, CollarNotch, WeaveBackdrop } from "@/components/site/jersey";
+import { JerseyGraphic } from "@/components/site/jersey-graphic";
 import { StadiumMark } from "@/components/site/stadium-mark";
 import { Button } from "@/components/ui/button";
 import { articles } from "@/content/articles";
@@ -18,23 +19,16 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero – das Trikot als Fläche: Neongelb, schwarze Ärmelgrafik. */}
+      {/* Hero – das Trikot als Fläche: Trikotfarbe mit der zerrissenen Grafik. */}
       <section className="relative overflow-hidden bg-bvb text-bvb-ink">
-        <div
-          aria-hidden
-          className="absolute inset-y-0 right-0 w-1/2 jersey-chevron opacity-[0.12]"
-        />
+        <JerseyGraphic className="absolute inset-y-0 right-0 w-1/2 text-bvb-ink opacity-[0.14]" />
         <div className="relative mx-auto max-w-6xl px-4 pt-16 pb-14 sm:px-6 sm:pt-24 sm:pb-20">
           <p className="font-mono text-[11px] tracking-[0.3em] uppercase opacity-70">
             {site.eyebrow}
           </p>
 
-          {/* Logo plus Arbeitstitel. Der Name steht noch aus. */}
           <div className="mt-6 flex flex-wrap items-center gap-5">
-            <StadiumMark
-              className="size-24 shrink-0 sm:size-28"
-              title="Sitzplan von oben, ein Platz auf der Seitentribüne ist schwarz"
-            />
+            <StadiumMark className="size-24 shrink-0 sm:size-28" />
             <h1 className="font-display text-5xl leading-[0.9] font-extrabold tracking-tight uppercase sm:text-7xl">
               {site.name}
             </h1>

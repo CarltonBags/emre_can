@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { ChevronBand } from "@/components/site/jersey";
+import { JerseyGraphic } from "@/components/site/jersey-graphic";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -12,10 +13,7 @@ export default function AboutPage() {
   return (
     <div>
       <section className="relative overflow-hidden bg-bvb text-bvb-ink">
-        <div
-          aria-hidden
-          className="absolute -right-20 -bottom-16 size-64 rotate-45 jersey-chevron opacity-[0.13]"
-        />
+        <JerseyGraphic className="absolute -right-20 -bottom-16 size-64 text-bvb-ink opacity-[0.14]" />
         <div className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
           <p className="font-mono text-[10px] tracking-[0.3em] uppercase opacity-70">
             In eigener Sache
@@ -79,10 +77,13 @@ export default function AboutPage() {
           <span className="mr-2 text-bvb">/</span>Warum die Seite so aussieht
         </h2>
         <p className="my-5">
-          Die Farbwelt kommt vom Heimtrikot der Saison 1993/94: Neongelb, harte
-          schwarze Grafik auf Schulter und Ärmel, V-Kragen, Nike, Continentale
-          auf der Brust. Das Trikot, in dem diese Mannschaft losgelaufen ist,
-          bevor 1995 alles anders wurde.
+          Die Farbwelt kommt vom Heimtrikot der Saison 1993/94: Neongelb,
+          V-Kragen, Nike, Continentale auf der Brust – und diese zerrissene
+          schwarze Grafik, die über Schulter und Ärmel lief. Keine gleichmäßigen
+          Streifen, sondern Balken in unterschiedlicher Länge und Stärke, mit
+          Lücken dazwischen. Genau so sind die Flächen hier auf der Seite
+          gebaut. Das Trikot, in dem diese Mannschaft losgelaufen ist, bevor
+          1995 alles anders wurde.
         </p>
         <p className="my-5">
           Ein Zugeständnis an heute habe ich mir erlaubt: Das grelle Neongelb

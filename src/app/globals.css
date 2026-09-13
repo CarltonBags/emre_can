@@ -220,22 +220,7 @@
 }
 
 @layer utilities {
-  /* Die schwarze Zickzack-Grafik von Schulter und Ärmel. */
-  .jersey-chevron {
-    background-image: repeating-linear-gradient(
-      135deg,
-      var(--bvb-ink) 0 10px,
-      transparent 10px 20px
-    );
-  }
-
-  .jersey-chevron-light {
-    background-image: repeating-linear-gradient(
-      135deg,
-      var(--bvb) 0 10px,
-      transparent 10px 20px
-    );
-  }
+  /* Die zerrissene Schultergrafik liegt als SVG in components/site/jersey-graphic.tsx. */
 
   /* Feines Nadelstreifen-Raster wie im Trikotstoff. */
   .jersey-weave {

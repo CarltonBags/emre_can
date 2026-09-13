@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Clock } from "lucide-react";
 
+import { JerseyGraphic } from "@/components/site/jersey-graphic";
 import { Badge } from "@/components/ui/badge";
 import { formatDate, formatDateShort, seasonOf } from "@/content/articles";
 import { readingMinutes } from "@/lib/markdown";
@@ -13,10 +14,7 @@ export function FeatureCard({ article }: { article: Article }) {
       href={`/artikel/${article.slug}`}
       className="group relative block overflow-hidden bg-bvb text-bvb-ink transition-transform duration-300 hover:-translate-y-0.5"
     >
-      <div
-        aria-hidden
-        className="absolute -top-16 -right-16 size-64 rotate-12 jersey-chevron opacity-[0.14]"
-      />
+      <JerseyGraphic className="absolute -top-16 -right-16 size-64 text-bvb-ink opacity-[0.15]" />
       <div className="relative flex flex-col gap-6 p-7 sm:p-10">
         <div className="flex flex-wrap items-center gap-3 font-mono text-[10px] tracking-[0.22em] uppercase">
           <span className="bg-bvb-ink px-2 py-1 text-bvb">{article.kicker}</span>

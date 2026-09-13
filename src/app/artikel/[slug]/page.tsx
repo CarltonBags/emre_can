@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 
 import { ChevronBand } from "@/components/site/jersey";
+import { JerseyGraphic } from "@/components/site/jersey-graphic";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { articles, formatDate, getArticle, getNeighbours, seasonOf } from "@/content/articles";
@@ -37,10 +38,7 @@ export default async function ArticlePage({ params }: PageProps<"/artikel/[slug]
     <article>
       {/* Kopf im Trikotgelb */}
       <header className="relative overflow-hidden bg-bvb text-bvb-ink">
-        <div
-          aria-hidden
-          className="absolute -top-10 -right-24 size-72 rotate-12 jersey-chevron opacity-[0.13]"
-        />
+        <JerseyGraphic className="absolute -top-10 -right-24 size-72 text-bvb-ink opacity-[0.14]" />
         <div className="relative mx-auto max-w-3xl px-4 pt-10 pb-12 sm:px-6 sm:pt-14 sm:pb-16">
           <Link
             href="/archiv"
