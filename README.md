@@ -17,12 +17,19 @@ Neongelbe Fläche, harte schwarze Zickzack-Grafik auf Schulter und Ärmel,
 V-Kragen. Das grelle Neongelb von damals ist bewusst durch das heutige
 Vereinsgelb `#FDE100` ersetzt.
 
-Die zerrissene Schultergrafik steckt in `components/site/jersey-graphic.tsx`:
-Balken mit wechselnder Länge und Stärke, erzeugt aus einem Generator mit festem
-Startwert, damit Server und Client dasselbe Bild rendern. Bewusst kein
-`repeating-linear-gradient` – das kann nur gleich lange Striche.
-Dazu `components/site/jersey.tsx` (`ChevronBand`, `CollarNotch`,
-`WeaveBackdrop`) und `.jersey-weave` in `globals.css`.
+Zwei Motive, bewusst getrennt:
+
+- **Große Flächen** (Hero, Artikelkopf, Kartenecken) tragen die zerrissene
+  Schultergrafik aus `components/site/jersey-graphic.tsx`: Striche von oben
+  rechts nach unten links, lückenlos nebeneinander, gleiche Stärke, aber jeder
+  unterschiedlich lang und versetzt angesetzt. Erzeugt aus einem Generator mit
+  festem Startwert, damit Server und Client dasselbe Bild rendern. Ein
+  `repeating-linear-gradient` scheidet aus – der kann nur gleich lange Striche.
+- **Schmale Bänder** zwischen den Sektionen bleiben beim gleichmäßigen
+  Zickzack (`.jersey-chevron` in `globals.css`, `ChevronBand`). Auf zehn Pixeln
+  Höhe wirkt die zerrissene Variante nur unruhig.
+
+Dazu `CollarNotch` und `WeaveBackdrop` in `components/site/jersey.tsx`.
 
 ### Zwei Farbwelten
 

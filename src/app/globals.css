@@ -220,7 +220,26 @@
 }
 
 @layer utilities {
-  /* Die zerrissene Schultergrafik liegt als SVG in components/site/jersey-graphic.tsx. */
+  /*
+   * Gleichmäßiges Zickzack für die schmalen Bänder zwischen den Sektionen.
+   * Die zerrissene Variante mit wechselnden Strichlängen liegt als SVG in
+   * components/site/jersey-graphic.tsx und deckt die großen Flächen ab.
+   */
+  .jersey-chevron {
+    background-image: repeating-linear-gradient(
+      135deg,
+      var(--bvb-ink) 0 10px,
+      transparent 10px 20px
+    );
+  }
+
+  .jersey-chevron-light {
+    background-image: repeating-linear-gradient(
+      135deg,
+      var(--bvb) 0 10px,
+      transparent 10px 20px
+    );
+  }
 
   /* Feines Nadelstreifen-Raster wie im Trikotstoff. */
   .jersey-weave {

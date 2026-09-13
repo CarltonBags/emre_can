@@ -1,10 +1,9 @@
-import { JerseyGraphic } from "@/components/site/jersey-graphic";
 import { cn } from "@/lib/utils";
 
 /**
- * Ein schmaler Ausschnitt der Trikotgrafik als Band zwischen den Sektionen.
- * Weil die Balken unterschiedlich lang und stark sind, sieht jedes Band
- * anders aus als ein sauber gezogener Streifen – so wie das Trikot eben auch.
+ * Das gleichmäßige Zickzack als schmales Band zwischen den Sektionen.
+ * Hier ist die Regelmäßigkeit gewollt: Auf zehn Pixeln Höhe würde die
+ * zerrissene Variante nur unruhig aussehen, statt nach Trikot.
  */
 export function ChevronBand({
   className,
@@ -19,14 +18,12 @@ export function ChevronBand({
     <div
       aria-hidden
       className={cn(
-        "relative w-full overflow-hidden",
-        tone === "onYellow" ? "bg-bvb text-bvb-ink" : "bg-bvb-ink text-bvb",
+        "w-full",
+        tone === "onYellow" ? "bg-bvb jersey-chevron" : "bg-bvb-ink jersey-chevron-light",
         className,
       )}
       style={{ height }}
-    >
-      <JerseyGraphic className="absolute inset-0 size-full" />
-    </div>
+    />
   );
 }
 
