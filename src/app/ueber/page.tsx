@@ -39,9 +39,9 @@ export default function AboutPage() {
         </p>
         <p className="my-5">
           Das Logo oben links ist genau das. Der Sitzplan von oben, als
-          Pixelgrafik, jeder Platz ein Kästchen, alles verkauft, alles gelb.
-          Nur einer auf der Westtribüne, knapp unter der Mittellinie, ist
-          schwarz. Der ist meiner.
+          Pixelgrafik, 444 Kästchen, jedes ein Platz, alles verkauft. Nur einer
+          auf der Westtribüne, knapp unter der Mittellinie, hat eine andere
+          Farbe. Der ist meiner.
         </p>
 
         <h2 className="mt-12 mb-4 font-display text-2xl font-extrabold tracking-wide uppercase sm:text-3xl">
@@ -87,6 +87,19 @@ export default function AboutPage() {
           von damals ist durch das Gelb ersetzt, das der Verein inzwischen
           verwendet. Es soll ja nach Erinnerung aussehen, nicht nach
           Kostümverleih.
+        </p>
+        <p className="my-5">
+          Und weil andere Seiten an dieser Stelle zwischen hell und dunkel
+          wählen lassen, gibt es hier oben rechts den Trikotwechsel. Zweite
+          Option ist das Auswärtstrikot derselben Saison: pinke Grundfarbe,
+          dieselbe schwarze Grafik auf Schulter und Ärmel, schwarzer V-Kragen.
+          Ein Ding, das 1993 vermutlich die halbe Liga irritiert hat und heute
+          Sammlerpreise erzielt.
+        </p>
+        <p className="my-5">
+          Der eine Platz im Logo trägt übrigens immer das jeweils andere
+          Trikot. Im Heimschema ist er pink, im Auswärtsschema gelb. Sonst
+          würde man ihn nicht finden, und darum geht es ja.
         </p>
 
         <div className="my-12 flex items-center gap-3" aria-hidden>

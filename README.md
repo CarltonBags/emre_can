@@ -22,6 +22,23 @@ Die Trikot-Motive liegen als Utilities in `src/app/globals.css`
 Komponenten in `src/components/site/jersey.tsx` (`ChevronBand`,
 `CollarNotch`, `WeaveBackdrop`).
 
+### Zwei Farbwelten
+
+Statt Hell/Dunkel wählt man im Kopf das Trikot. `data-kit` am `<html>`
+schaltet zwischen `heim` (Gelb, `#FDE100`) und `auswaerts` (Pink, `#E8398B`,
+Lila in `--bvb-deep`). Beide Paletten stehen in `globals.css`, die Auswahl
+liegt in `src/lib/kits.ts`, der Schalter in `components/site/kit-toggle.tsx`.
+Ein blockierendes Inline-Skript in `layout.tsx` setzt das Attribut vor dem
+ersten Paint, sonst blitzt kurz das Heimtrikot auf.
+
+### Logo
+
+`components/site/stadium-mark.tsx` zeichnet den Sitzplan von oben: 25x25-Raster,
+444 Plätze, ausgesparte Ecken, leerer Innenraum. Alle Plätze tragen `--bvb`,
+einer auf der Westtribüne `--seat-mine` – und das ist bewusst die Farbe des
+jeweils anderen Trikots. `src/app/icon.svg` hat dieselbe Geometrie mit festen
+Farben, weil ein Favicon keine CSS-Variablen lesen kann.
+
 ## Branding
 
 Der Blog hat noch keinen Namen. Alle Platzhalter stecken in **`src/lib/site.ts`**:

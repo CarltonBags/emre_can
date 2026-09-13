@@ -129,15 +129,23 @@
   }
 }
 /* ------------------------------------------------------------------
-   BVB 1993/94 – Trikot-Theme
-   Neongelb der 90er, aber im heutigen Vereinsgelb (#FDE100).
-   Schwarze Schulter-/Ärmelgrafik des Nike-Trikots als Motiv.
+   Trikot-Themes, Saison 1993/94
+   Zwei Farbwelten, umschaltbar über [data-kit] am <html>:
+
+   "heim"     Neongelb der 90er, aber im heutigen Vereinsgelb (#FDE100),
+              dazu die schwarze Schulter- und Ärmelgrafik des Nike-Trikots.
+   "auswaerts" Das pinke Auswärtstrikot derselben Saison – pinke Grundfarbe,
+              schwarze Grafik auf Schulter und Ärmel, schwarzer V-Kragen.
+              Das Lila steckt in --bvb-deep.
+
+   Jede Farbe im Layout hängt an diesen Tokens, deshalb reicht der Tausch hier.
 ------------------------------------------------------------------ */
 
 @theme inline {
   --color-bvb: var(--bvb);
   --color-bvb-deep: var(--bvb-deep);
   --color-bvb-ink: var(--bvb-ink);
+  --color-seat-mine: var(--seat-mine);
   --font-display: var(--font-display);
 }
 
@@ -145,6 +153,9 @@
   --bvb: #fde100;
   --bvb-deep: #e8ce00;
   --bvb-ink: #0a0a08;
+  /* Der eine Platz im Logo trägt immer das jeweils andere Trikot. */
+  --seat-mine: #e8398b;
+  --weave: rgba(253, 225, 0, 0.05);
 
   --background: #0a0a08;
   --foreground: #f4f1e6;
@@ -165,6 +176,34 @@
   --input: #262620;
   --ring: #fde100;
   --radius: 0.25rem;
+}
+
+/* Auswärts 1993/94: Pink mit schwarzer Grafik, Lila als zweite Farbe. */
+:root[data-kit="auswaerts"] {
+  --bvb: #e8398b;
+  --bvb-deep: #7d2ea8;
+  --bvb-ink: #120610;
+  --seat-mine: #fde100;
+  --weave: rgba(232, 57, 139, 0.07);
+
+  --background: #120610;
+  --foreground: #f7eef4;
+  --card: #1b0a18;
+  --card-foreground: #f7eef4;
+  --popover: #1b0a18;
+  --popover-foreground: #f7eef4;
+  --primary: #e8398b;
+  --primary-foreground: #120610;
+  --secondary: #241026;
+  --secondary-foreground: #f7eef4;
+  --muted: #1a0917;
+  --muted-foreground: #b39dac;
+  --accent: #241026;
+  --accent-foreground: #e8398b;
+  --destructive: #ff5c63;
+  --border: #301230;
+  --input: #301230;
+  --ring: #e8398b;
 }
 
 @layer base {
@@ -202,7 +241,7 @@
   .jersey-weave {
     background-image: repeating-linear-gradient(
       45deg,
-      rgba(253, 225, 0, 0.05) 0 1px,
+      var(--weave) 0 1px,
       transparent 1px 6px
     );
   }

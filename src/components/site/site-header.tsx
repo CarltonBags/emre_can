@@ -6,6 +6,7 @@ import { Menu } from "lucide-react";
 
 import { Brand } from "@/components/site/brand";
 import { ChevronBand } from "@/components/site/jersey";
+import { KitToggle } from "@/components/site/kit-toggle";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { site } from "@/lib/site";
@@ -38,6 +39,7 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
+            <KitToggle className="ml-3" />
           </nav>
 
           <Sheet>
@@ -61,6 +63,12 @@ export function SiteHeader() {
                     {item.label}
                   </Link>
                 ))}
+                <div className="pt-8">
+                  <p className="mb-2 font-mono text-[10px] tracking-[0.25em] text-muted-foreground uppercase">
+                    Trikot
+                  </p>
+                  <KitToggle />
+                </div>
               </div>
             </SheetContent>
           </Sheet>
