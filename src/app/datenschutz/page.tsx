@@ -17,7 +17,7 @@ export default function PrivacyPage() {
   return (
     <div>
       <section className="relative overflow-hidden bg-bvb text-bvb-ink">
-        <JerseyGraphic className="absolute -right-20 -bottom-16 size-64 text-bvb-ink opacity-[0.14]" />
+        <JerseyGraphic className="absolute top-0 right-0 h-full aspect-square text-bvb-ink opacity-[0.14]" />
         <div className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
           <p className="font-mono text-[10px] tracking-[0.3em] uppercase opacity-70">
             Stand: {formatDate(privacy.updated)}

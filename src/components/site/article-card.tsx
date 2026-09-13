@@ -14,7 +14,7 @@ export function FeatureCard({ article }: { article: Article }) {
       href={`/artikel/${article.slug}`}
       className="group relative block overflow-hidden bg-bvb text-bvb-ink transition-transform duration-300 hover:-translate-y-0.5"
     >
-      <JerseyGraphic className="absolute -top-16 -right-16 size-64 text-bvb-ink opacity-[0.15]" />
+      <JerseyGraphic className="absolute top-0 right-0 h-full aspect-square text-bvb-ink opacity-[0.14]" />
       <div className="relative flex flex-col gap-6 p-7 sm:p-10">
         <div className="flex flex-wrap items-center gap-3 font-mono text-[10px] tracking-[0.22em] uppercase">
           <span className="bg-bvb-ink px-2 py-1 text-bvb">{article.kicker}</span>

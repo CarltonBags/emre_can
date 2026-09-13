@@ -38,7 +38,7 @@ export default async function ArticlePage({ params }: PageProps<"/artikel/[slug]
     <article>
       {/* Kopf im Trikotgelb */}
       <header className="relative overflow-hidden bg-bvb text-bvb-ink">
-        <JerseyGraphic className="absolute -top-10 -right-24 size-72 text-bvb-ink opacity-[0.14]" />
+        <JerseyGraphic className="absolute top-0 right-0 h-full aspect-square text-bvb-ink opacity-[0.14]" />
         <div className="relative mx-auto max-w-3xl px-4 pt-10 pb-12 sm:px-6 sm:pt-14 sm:pb-16">
           <Link
             href="/archiv"

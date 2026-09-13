@@ -30,8 +30,11 @@ Zwei Motive, bewusst getrennt:
   linken und unteren Kante. Sonst schneidet der Rand sie ab und das Quadrat,
   in dem die Grafik sitzt, wird als gerade Linie sichtbar. `floorAt()` rechnet
   dafür aus, wo die gedrehte Fläche endet. Aus demselben Grund steht
-  `preserveAspectRatio` auf `meet` und alle Einsatzorte sind quadratisch –
-  bei `slice` würde wieder gekappt.
+  `preserveAspectRatio` auf `meet`.
+
+  Eingebunden wird überall gleich: `absolute top-0 right-0 h-full aspect-square`.
+  Das Quadrat ist damit so hoch wie der Kasten, in dem es sitzt, und hängt
+  rechts oben – der Container braucht `relative overflow-hidden`.
 - **Schmale Bänder** zwischen den Sektionen bleiben beim gleichmäßigen
   Zickzack (`.jersey-chevron` in `globals.css`, `ChevronBand`). Auf zehn Pixeln
   Höhe wirkt die zerrissene Variante nur unruhig.

@@ -21,7 +21,7 @@ export default function Home() {
     <>
       {/* Hero – das Trikot als Fläche: Trikotfarbe mit der zerrissenen Grafik. */}
       <section className="relative overflow-hidden bg-bvb text-bvb-ink">
-        <JerseyGraphic className="absolute -top-20 -right-20 size-[34rem] text-bvb-ink opacity-[0.14]" />
+        <JerseyGraphic className="absolute top-0 right-0 h-full aspect-square text-bvb-ink opacity-[0.14]" />
         <div className="relative mx-auto max-w-6xl px-4 pt-16 pb-14 sm:px-6 sm:pt-24 sm:pb-20">
           <p className="font-mono text-[11px] tracking-[0.3em] uppercase opacity-70">
             {site.eyebrow}
