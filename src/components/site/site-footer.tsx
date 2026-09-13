@@ -13,14 +13,9 @@ export function SiteFooter() {
           <div>
             <div className="mb-4 flex items-center gap-3">
               <StadiumMark className="size-11 shrink-0" />
-              <div className="leading-tight">
-                <p className="font-mono text-[9px] tracking-[0.25em] text-muted-foreground uppercase">
-                  Name folgt
-                </p>
-                <p className="font-display text-xl font-extrabold tracking-tight uppercase">
-                  {site.workingTitle}
-                </p>
-              </div>
+              <p className="font-display text-2xl leading-none font-extrabold tracking-tight uppercase">
+                {site.name}
+              </p>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
               {site.description}

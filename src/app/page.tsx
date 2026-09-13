@@ -35,14 +35,9 @@ export default function Home() {
               className="size-24 shrink-0 sm:size-28"
               title="Sitzplan von oben, ein Platz auf der Seitentribüne ist schwarz"
             />
-            <div>
-              <p className="font-mono text-[10px] tracking-[0.3em] uppercase opacity-60">
-                Name folgt
-              </p>
-              <h1 className="font-display text-5xl leading-[0.9] font-extrabold tracking-tight uppercase sm:text-7xl">
-                {site.workingTitle}
-              </h1>
-            </div>
+            <h1 className="font-display text-5xl leading-[0.9] font-extrabold tracking-tight uppercase sm:text-7xl">
+              {site.name}
+            </h1>
           </div>
 
           <p className="mt-8 max-w-2xl font-display text-2xl leading-tight font-semibold tracking-wide uppercase sm:text-3xl">

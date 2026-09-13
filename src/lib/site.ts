@@ -1,12 +1,10 @@
 /**
- * Branding-Platzhalter.
- * Der Blog hat noch keinen Namen – alles, was hier steht, ist bewusst
- * an einer Stelle gebündelt, damit Name, Claim und Logo später in
- * einem Rutsch getauscht werden können.
+ * Branding an einer Stelle gebündelt: Name, Claim und Beschreibung.
+ * Das Logo liegt als Komponente in components/site/stadium-mark.tsx.
  */
 export const site = {
-  /** Arbeitstitel, bis der echte Name steht. */
-  workingTitle: "NOCH OHNE NAMEN",
+  /** Ruhrdeutsch für "es ist ausverkauft". Passt zum Sitzplan im Logo. */
+  name: "Ausverkauft is",
   /** Erscheint klein über dem Namen. */
   eyebrow: "Ein Blog über Borussia Dortmund",
   /** Zweizeiler für Kopf- und Fußbereich. */

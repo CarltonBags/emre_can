@@ -32,12 +32,16 @@ export default function AboutPage() {
 
       <div className="mx-auto max-w-3xl px-4 py-14 text-[17px] leading-[1.75] text-foreground/85 sm:px-6">
         <p className="my-5">
-          Dieser Blog hat noch keinen Namen. Das ist kein Versehen, sondern der
-          Stand der Dinge: Ich schreibe hier seit 2023 auf, was mir zu Borussia
-          Dortmund einfällt, und über einen Titel für das Ganze bin ich mir
-          immer noch nicht einig. Die Fläche dafür ist im Kopf dieser Seite
-          freigehalten, oben links, das gestrichelte Quadrat. Da kommt
-          irgendwann ein Logo hin.
+          Der Blog heißt „Ausverkauft is“. Über den Namen habe ich zwei Jahre
+          gebraucht, dabei stand er die ganze Zeit an jedem Kiosk und in jedem
+          Zug Richtung Stadion. Es gibt kein Wort, das den Zustand besser
+          trifft: Die Karten sind weg, der Laden ist voll, mehr geht nicht.
+        </p>
+        <p className="my-5">
+          Das Logo oben links ist genau das. Der Sitzplan von oben, als
+          Pixelgrafik, jeder Platz ein Kästchen, alles verkauft, alles gelb.
+          Nur einer auf der Westtribüne, knapp unter der Mittellinie, ist
+          schwarz. Der ist meiner.
         </p>
 
         <h2 className="mt-12 mb-4 font-display text-2xl font-extrabold tracking-wide uppercase sm:text-3xl">
