@@ -1,69 +1,138 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+import { ArticleCard, ArticleRow, FeatureCard } from "@/components/site/article-card";
+import { ChevronBand, CollarNotch, WeaveBackdrop } from "@/components/site/jersey";
+import { Button } from "@/components/ui/button";
+import { articles } from "@/content/articles";
+import { site } from "@/lib/site";
 
 export default function Home() {
+  const featured = articles.filter((article) => article.featured);
+  const lead = featured[0] ?? articles[0];
+  const rest = articles.filter((article) => article.slug !== lead.slug);
+  const recent = rest.slice(0, 6);
+  const archive = rest.slice(6, 14);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      {/* Hero – das Trikot als Fläche: Neongelb, schwarze Ärmelgrafik. */}
+      <section className="relative overflow-hidden bg-bvb text-bvb-ink">
+        <div
+          aria-hidden
+          className="absolute inset-y-0 right-0 w-1/2 jersey-chevron opacity-[0.12]"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+        <div className="relative mx-auto max-w-6xl px-4 pt-16 pb-14 sm:px-6 sm:pt-24 sm:pb-20">
+          <p className="font-mono text-[11px] tracking-[0.3em] uppercase opacity-70">
+            {site.eyebrow}
           </p>
+
+          {/* Branding-Platzhalter: hier kommt später das Logo hin. */}
+          <div className="mt-6 flex flex-wrap items-center gap-5">
+            <div
+              aria-hidden
+              className="grid size-24 shrink-0 place-items-center border-[3px] border-dashed border-bvb-ink/40 font-display text-3xl font-bold text-bvb-ink/40 sm:size-28"
+            >
+              {site.logoMark}
+            </div>
+            <div>
+              <p className="font-mono text-[10px] tracking-[0.3em] uppercase opacity-60">
+                Logo- und Namensfläche – noch frei
+              </p>
+              <h1 className="font-display text-5xl leading-[0.9] font-extrabold tracking-tight uppercase sm:text-7xl">
+                {site.workingTitle}
+              </h1>
+            </div>
+          </div>
+
+          <p className="mt-8 max-w-2xl font-display text-2xl leading-tight font-semibold tracking-wide uppercase sm:text-3xl">
+            Wohlwollende Texte über Borussia Dortmund. Aus der Kurve, nicht von
+            der Pressetribüne.
+          </p>
+
+          <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-bvb-ink/75">
+            Keine Analysen, die niemand bestellt hat. Keine Noten, keine
+            Häme. Nur Erinnerungen, Spielerporträts und Saisonnotizen von
+            jemandem, der es nie geschafft hat, sich davon zu lösen.
+          </p>
+
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Button
+              asChild
+              size="lg"
+              className="rounded-none bg-bvb-ink font-display tracking-widest text-bvb uppercase hover:bg-bvb-ink/85"
+            >
+              <Link href={`/artikel/${lead.slug}`}>Neuester Text</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-none border-2 border-bvb-ink bg-transparent font-display tracking-widest text-bvb-ink uppercase hover:bg-bvb-ink hover:text-bvb"
+            >
+              <Link href="/archiv">Alle {articles.length} Texte</Link>
+            </Button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <ChevronBand tone="onDark" height={10} />
+      </section>
+
+      {/* Aufmacher */}
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+        <SectionHeading
+          label="Aufmacher"
+          title="Der Text, mit dem ich anfangen würde"
+        />
+        <FeatureCard article={lead} />
+      </section>
+
+      {/* Zuletzt */}
+      <section className="relative border-y border-border bg-card/40">
+        <WeaveBackdrop />
+        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+          <SectionHeading label="Zuletzt geschrieben" title="Neu im Blog" />
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {recent.map((article) => (
+              <ArticleCard key={article.slug} article={article} />
+            ))}
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Archivanriss */}
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+        <SectionHeading label="Weiter zurück" title="Aus dem Archiv" />
+        <div className="border-t border-border">
+          {archive.map((article) => (
+            <ArticleRow key={article.slug} article={article} />
+          ))}
+        </div>
+        <div className="mt-10">
+          <Button
+            asChild
+            variant="ghost"
+            className="rounded-none px-0 font-display tracking-widest text-bvb uppercase hover:bg-transparent hover:text-foreground"
+          >
+            <Link href="/archiv">
+              Komplettes Archiv <ArrowRight className="ml-2 size-4" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* Kragen-Abschluss wie am Trikot */}
+      <CollarNotch className="rotate-180" />
+    </>
+  );
+}
+
+function SectionHeading({ label, title }: { label: string; title: string }) {
+  return (
+    <div className="mb-8">
+      <p className="font-mono text-[10px] tracking-[0.3em] text-bvb uppercase">{label}</p>
+      <h2 className="mt-2 font-display text-3xl leading-none font-extrabold tracking-tight uppercase sm:text-4xl">
+        {title}
+      </h2>
     </div>
   );
 }

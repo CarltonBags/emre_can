@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BVB-Blog (Arbeitstitel)
 
-## Getting Started
+Ein Next.js-Blog mit wohlwollenden Texten über Borussia Dortmund, geschrieben
+aus Fansicht. 29 Artikel, datiert von Mai 2023 bis September 2026.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js 16 (App Router, Turbopack) + TypeScript
+- Tailwind CSS v4
+- shadcn/ui (Button, Badge, Separator, Sheet)
+- lucide-react
+
+## Design
+
+Die Farbwelt zitiert das **Heimtrikot 1993/94** (Nike, "die Continentale"):
+Neongelbe Fläche, harte schwarze Zickzack-Grafik auf Schulter und Ärmel,
+V-Kragen. Das grelle Neongelb von damals ist bewusst durch das heutige
+Vereinsgelb `#FDE100` ersetzt.
+
+Die Trikot-Motive liegen als Utilities in `src/app/globals.css`
+(`.jersey-chevron`, `.jersey-chevron-light`, `.jersey-weave`) und als
+Komponenten in `src/components/site/jersey.tsx` (`ChevronBand`,
+`CollarNotch`, `WeaveBackdrop`).
+
+## Branding
+
+Der Blog hat noch keinen Namen. Alle Platzhalter stecken in **`src/lib/site.ts`**:
+
+```ts
+workingTitle  // Arbeitstitel im Kopf, Fuß und Titel-Tag
+logoMark      // Kürzel im gestrichelten Logofeld
+eyebrow       // Zeile über dem Namen
+claim         // Zweizeiler im Fuß
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Freigehaltene Flächen fürs spätere Logo:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/components/site/brand.tsx` – gestricheltes Quadrat in der Kopfleiste
+- `src/app/page.tsx` – großes Logofeld im Hero
+- `src/components/site/site-footer.tsx` – Logofeld im Fuß
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Zum Umbenennen reicht `site.ts`; für das Logo die drei gestrichelten
+Container gegen ein `<Image>`/SVG tauschen.
 
-## Learn More
+## Inhalte
 
-To learn more about Next.js, take a look at the following resources:
+Ein Artikel = eine Datei unter `src/content/articles/<slug>.ts` mit
+Default-Export vom Typ `Article` (`src/lib/types.ts`). Neue Artikel zusätzlich
+in `src/content/articles.ts` importieren und in das Array eintragen.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Der Fließtext ist ein kleiner Markdown-Dialekt, gerendert von
+`src/lib/markdown.tsx`: `##`, `###`, `>`, `- `, `---`, `**fett**`, `*kursiv*`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Entwicklung
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run dev     # http://localhost:3000
+npm run build
+npm run lint
+```
