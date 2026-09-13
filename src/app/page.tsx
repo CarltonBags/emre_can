@@ -46,14 +46,12 @@ export default function Home() {
           </div>
 
           <p className="mt-8 max-w-2xl font-display text-2xl leading-tight font-semibold tracking-wide uppercase sm:text-3xl">
-            Wohlwollende Texte über Borussia Dortmund. Aus der Kurve, nicht von
-            der Pressetribüne.
+            81.365 Plätze. Einer davon ist meiner.
           </p>
 
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-bvb-ink/75">
-            Keine Analysen, die niemand bestellt hat. Keine Noten, keine
-            Häme. Nur Erinnerungen, Spielerporträts und Saisonnotizen von
-            jemandem, der es nie geschafft hat, sich davon zu lösen.
+            Erinnerungen, Spielerporträts und Saisonnotizen von jemandem, der
+            es nie geschafft hat, sich davon zu lösen.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3">

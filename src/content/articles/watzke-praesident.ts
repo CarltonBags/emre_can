@@ -45,7 +45,7 @@ Das war eine Entscheidung. Man hätte es auch anders machen können, und viele h
 
 ## Wo ich anderer Meinung war
 
-Ich schreibe hier wohlwollend, aber nicht blind, deshalb dazu auch ein Satz.
+Ich bin Fan und kein Chronist, aber nicht blind, deshalb dazu auch ein Satz.
 
 Watzke war über zwanzig Jahre eine sehr dominante Figur, und es gab Phasen, in denen ich mir gewünscht hätte, dass Entscheidungen weniger an einer einzigen Person hängen. Ein Verein, bei dem alles über einen Schreibtisch läuft, hat ein Problem, sobald dieser Schreibtisch leer ist.
 

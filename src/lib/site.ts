@@ -12,7 +12,7 @@ export const site = {
   /** Zweizeiler für Kopf- und Fußbereich. */
   claim: "Schwarzgelb, aus dem Bauch heraus. Seit 2023.",
   description:
-    "Wohlwollende Texte über Borussia Dortmund – aus Fansicht, nicht aus der Pressetribüne. Erinnerungen, Spielerporträts und Saisonnotizen von 2023 bis heute.",
+    "Geschichten über Borussia Dortmund. Erinnerungen, Spielerporträts und Saisonnotizen von 2023 bis heute.",
   /** Platzhalter-Kürzel im Logofeld. */
   logoMark: "??",
   author: {

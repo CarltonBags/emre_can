@@ -44,11 +44,12 @@ export default function AboutPage() {
           <span className="mr-2 text-bvb">/</span>Worum es hier geht
         </h2>
         <p className="my-5">
-          Um Zuneigung. Es gibt genug Seiten, auf denen Spielernoten verteilt,
+          Um Geschichten. Es gibt genug Seiten, auf denen Spielernoten verteilt,
           Ablösesummen gegengerechnet und Trainer nach vier Spieltagen entlassen
-          werden. Hier nicht. Ich schreibe wohlwollend, weil ich auch wohlwollend
-          gucke. Das ist keine journalistische Haltung, das ist eine Fanhaltung,
-          und ich halte sie für vollkommen legitim, solange man sie dazusagt.
+          werden. Hier stehen Geschichten – über Spieler, über Abende, über
+          Leute, die für diesen Verein gearbeitet haben. Das ist keine
+          journalistische Haltung, das ist eine Fanhaltung, und ich halte sie
+          für vollkommen legitim, solange man sie dazusagt.
         </p>
         <p className="my-5">
           Was ich mir dabei verbiete: Dinge zu erfinden. Alles, was hier an
