@@ -1,7 +1,7 @@
 # BVB-Blog (Arbeitstitel)
 
 Ein Next.js-Blog mit wohlwollenden Texten über Borussia Dortmund, geschrieben
-aus Fansicht. 29 Artikel, datiert von Mai 2023 bis September 2026.
+aus Fansicht. 37 Artikel, datiert von Mai 2023 bis September 2026.
 
 ## Stack
 

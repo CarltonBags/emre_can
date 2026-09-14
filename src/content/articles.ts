@@ -1,5 +1,13 @@
 import type { Article } from "@/lib/types";
 
+import bvbFrauen from "./articles/bvb-frauen-regionalliga";
+import dreiNullPaderborn from "./articles/drei-null-gegen-paderborn";
+import gregorKobel from "./articles/gregor-kobel-fuenfzehn-weisse-westen";
+import julianBrandt from "./articles/julian-brandt-sieben-jahre";
+import matthiasSammer from "./articles/matthias-sammer-der-antreiber";
+import maximilianBeier from "./articles/maximilian-beier-endlich-angekommen";
+import norbertDickel from "./articles/norbert-dickel-held-von-berlin";
+import weltpokalTokio from "./articles/weltpokal-tokio-1997";
 import adeyemiBarcelona from "./articles/adeyemi-geht-nach-barcelona";
 import dasDerbyIstZurueck from "./articles/das-derby-ist-zurueck";
 import dankeNuri from "./articles/danke-nuri";
@@ -31,6 +39,14 @@ import kovacFussball from "./articles/warum-der-kovac-fussball-der-richtige-ist"
 import wembley from "./articles/wembley-wir-waren-da";
 
 const all: Article[] = [
+  bvbFrauen,
+  dreiNullPaderborn,
+  gregorKobel,
+  julianBrandt,
+  matthiasSammer,
+  maximilianBeier,
+  norbertDickel,
+  weltpokalTokio,
   adeyemiBarcelona,
   dasDerbyIstZurueck,
   dankeNuri,
